@@ -2,6 +2,7 @@
 #include "ui_loginwindow.h"
 #include"welcomewindow.h"
 #include "Users.h"
+#include "registerwindow.h"
 LoginWindow::LoginWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::LoginWindow)
@@ -22,19 +23,21 @@ void LoginWindow::on_Login_clicked()
     QString username = ui->name->text();
     QString password = ui ->pass->text();
     bool found = false;
-    for (int i = 0; i < 101; ++i)
+    int index = 0;
+    for (int i = 0; i < 100; ++i)
     {
         if (usernames[i] == username && passwords[i] == password)
         {
+            index = i;
             found = true;
             break;
         }
     }
     if (found==true)
     {
-     hide();
-     WelcomeWindow* welcomewindow = new WelcomeWindow(this);
-     welcomewindow->show();
+        hide();
+        WelcomeWindow* welcomewindow = new WelcomeWindow(this, username, QString::number(ages[index]));
+        welcomewindow->show();
     }
     else
     {
@@ -46,8 +49,7 @@ void LoginWindow::on_Login_clicked()
 
 void LoginWindow::on_Register_clicked()
 {
-    hide ();
-    WelcomeWindow* welcomeWindow = new WelcomeWindow(this);
-    welcomeWindow->show();
+    hide();
+    RegisterWindow* registerWindow = new RegisterWindow(this);
+    registerWindow->show();
 }
-

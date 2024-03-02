@@ -52,30 +52,36 @@
     <string>Re-type Password</string>
    </property>
   </widget>
-  <widget class="QLabel" name="notmatching">
+  <widget class="QLabel" name="passwordsMatchError">
    <property name="geometry">
     <rect>
      <x>250</x>
-     <y>90</y>
+     <y>80</y>
      <width>111</width>
      <height>20</height>
     </rect>
    </property>
    <property name="text">
-    <string/>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;*Not Matching&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="textFormat">
+    <enum>Qt::AutoText</enum>
+   </property>
+   <property name="scaledContents">
+    <bool>false</bool>
    </property>
   </widget>
-  <widget class="QLabel" name="notmatching_2">
+  <widget class="QLabel" name="invalidAge">
    <property name="geometry">
     <rect>
      <x>290</x>
-     <y>160</y>
-     <width>63</width>
+     <y>180</y>
+     <width>121</width>
      <height>20</height>
     </rect>
    </property>
    <property name="text">
-    <string/>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;*Age must be at least 12&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QGroupBox" name="groupBox">
@@ -99,6 +105,66 @@
       <height>26</height>
      </rect>
     </property>
+    <item>
+     <property name="text">
+      <string>January</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>February</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>March</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>April</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>May</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>June</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>July</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>August</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>September</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>October</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Novermber</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>December</string>
+     </property>
+    </item>
    </widget>
    <widget class="QLineEdit" name="day">
     <property name="geometry">
@@ -108,6 +174,9 @@
       <width>71</width>
       <height>26</height>
      </rect>
+    </property>
+    <property name="text">
+     <string/>
     </property>
    </widget>
    <widget class="QLineEdit" name="year">
@@ -242,13 +311,13 @@
    <property name="geometry">
     <rect>
      <x>250</x>
-     <y>20</y>
-     <width>63</width>
+     <y>50</y>
+     <width>111</width>
      <height>20</height>
     </rect>
    </property>
    <property name="text">
-    <string/>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;*Username Already Exists&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QGroupBox" name="groupBox_4">
@@ -347,12 +416,18 @@
     <rect>
      <x>140</x>
      <y>530</y>
-     <width>63</width>
+     <width>181</width>
      <height>20</height>
     </rect>
    </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="toolTipDuration">
+    <number>-34</number>
+   </property>
    <property name="text">
-    <string/>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;*All fields must be filled&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QPushButton" name="Register">
@@ -368,7 +443,7 @@
     <string>Register</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit">
+  <widget class="QLineEdit" name="password">
    <property name="geometry">
     <rect>
      <x>90</x>
@@ -414,15 +489,15 @@
   <zorder>label</zorder>
   <zorder>label_3</zorder>
   <zorder>label_4</zorder>
-  <zorder>notmatching</zorder>
-  <zorder>notmatching_2</zorder>
+  <zorder>passwordsMatchError</zorder>
+  <zorder>invalidAge</zorder>
   <zorder>groupBox_2</zorder>
   <zorder>groupBox_3</zorder>
   <zorder>alreadyexists</zorder>
   <zorder>groupBox_4</zorder>
   <zorder>allfileds</zorder>
   <zorder>Register</zorder>
-  <zorder>lineEdit</zorder>
+  <zorder>password</zorder>
   <zorder>usernameline</zorder>
   <zorder>retypepassword</zorder>
  </widget>
